@@ -4,15 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Dice {
-
-
+   private static List<Die> set;
 
     public static List<Die> Set(int quantity, int faces) {
-        List<Die> set = new ArrayList<Die>();
-        for (int idx = 0; idx < quantity; idx++) {
-            Die die = new Die(faces);
-            set.add(die);
-        }
-        return set;
+     set = new ArrayList<Die>();
+        for (int idx = 0; idx < quantity; idx++)
+            set.add(new Die(faces));
+      return set;
+    }
+    public static int Roll(int dieNumber){
+       Die rollDie=set.get(dieNumber);
+       rollDie.Roll();
+       return rollDie.getFaceUp();
     }
 }
