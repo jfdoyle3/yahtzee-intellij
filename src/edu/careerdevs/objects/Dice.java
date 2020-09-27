@@ -7,7 +7,7 @@ public class Dice {
    private static List<Die> set;
 
     public static List<Die> Set(int quantity, int faces) {
-     set = new ArrayList<Die>();
+     set = new ArrayList<>();
         for (int idx = 0; idx < quantity; idx++)
             set.add(new Die(faces));
       return set;
@@ -17,4 +17,5 @@ public class Dice {
        rollDie.Roll();
        return rollDie.getFaceUp();
     }
+
 }
