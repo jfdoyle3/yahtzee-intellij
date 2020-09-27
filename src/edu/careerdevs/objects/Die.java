@@ -10,15 +10,13 @@ public class Die {
     private Random random=new Random();
 
 
-    public Die (){
-        faceUp=1;
-    }
     public Die (int faces){
         this.faces=faces;
+        faceUp=1;
     }
+
     public void Roll(){
        this.faceUp= random.nextInt(faces)+1;
-
     }
 
     public int getFaceUp(){
