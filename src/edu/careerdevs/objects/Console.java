@@ -8,15 +8,15 @@ public class Console {
 
     private static Scanner input=new Scanner(System.in);
 
-    public static List<Integer> DiceInput() {
+    public static List<Integer> DiceInput(int amount) {
         String userInput=input.nextLine();
         String[] arrayOutput=userInput.split("");
         List<Integer> intList=new ArrayList<>();
         for (String strNumber : arrayOutput) {
             int intNumber = Integer.parseInt(strNumber);
-            if (intNumber > arrayOutput.length) {
-                System.out.println("Keep roll - no change");
-            } else {
+            if(intNumber>=amount || intNumber<0) {
+            System.out.println("Error - keep rolll");
+            }else {
                 intList.add(intNumber);
             }
         }

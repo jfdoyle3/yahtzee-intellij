@@ -12,10 +12,9 @@ public class Dice {
             set.add(new Die(faces));
       return set;
     }
-    public static int Roll(int dieNumber){
+    public static void Roll(int dieNumber){
        Die rollDie=set.get(dieNumber);
        rollDie.Roll();
-       return rollDie.getFaceUp();
     }
 
 }

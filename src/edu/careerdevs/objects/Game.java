@@ -15,7 +15,6 @@ public class Game {
             Turn(dice);
             Console.DisplayDice(dice);
             boolean endGame = Win(dice);
-            System.out.println(endGame);
             if (endGame) {
                 System.out.println("Yahtzee!!  :)");
                 break;
@@ -27,10 +26,10 @@ public class Game {
     }
 
     public static void Turn(List<Die> dice) {
-        System.out.printf("Enter a number(s) between 0 - %d. Greater than %d to keep roll.  ",(dice.size()-1),(dice.size()-1));
-        List<Integer> userChoice=Console.DiceInput();
-        for (int die=0; die<userChoice.size(); die++) {
-            Dice.Roll(userChoice.get(die));
+        System.out.printf("Enter a number(s) between 0 - %d.  ",(dice.size()-1));
+        List<Integer> userDieChoice=Console.DiceInput(dice.size());
+        for (int die : userDieChoice){
+            Dice.Roll(die);
         }
     }
 
