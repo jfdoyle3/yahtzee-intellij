@@ -16,5 +16,11 @@ public class Dice {
        Die rollDie=set.get(dieNumber);
        rollDie.Roll();
     }
+    public static void RollDice(List<Die> dice){
+        for (int idx=0; idx<dice.size(); idx++){
+           Roll(idx);
+        }
+
+    }
 
 }
