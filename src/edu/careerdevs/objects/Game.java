@@ -6,14 +6,16 @@ public class Game {
 
     public static void playGame() {
         System.out.println("Playing Game");
-        List<Die> dice = Dice.Set(5, 6);
+        ScoreSheet scoreSheet=new ScoreSheet();
+        System.out.println(scoreSheet.toString());
+        List<Die> dice = Dice.set(5, 6);
         int rounds = 3;
-        Dice.RollDice(dice);
+        Dice.rollDice(dice);
         Console.DisplayDice(dice);
         for (int turn = 0; turn < rounds; turn++) {
-            Turn(dice);
+            turn(dice);
             Console.DisplayDice(dice);
-            boolean endGame = Win(dice);
+            boolean endGame = win(dice);
             if (endGame) {
                 System.out.println("Yahtzee!!  :)");
                 break;
@@ -21,16 +23,16 @@ public class Game {
         }
     }
 
-    public static void Turn(List<Die> dice) {
+    public static void turn(List<Die> dice) {
         System.out.printf("Enter a number(s) between 1 - %d. ex. 0123  ", (dice.size()) - 1);
         List<Integer> userDieChoice = Console.DiceInput(dice.size());
         for (int die : userDieChoice) {
-            Dice.Roll(die);
+            Dice.roll(die);
         }
     }
 
-    public static boolean Win(List<Die> dice) {
-        boolean win = false;
+    public static boolean win(List<Die> dice) {
+        boolean isWon = false;
         int firstDie = dice.get(0).getFaceUp();
         int matching = 0;
         for (int idx = 1; idx < dice.size(); idx++) {
@@ -39,8 +41,8 @@ public class Game {
             }
         }
         if (matching == dice.size() - 1) {
-            win = true;
+            isWon = true;
         }
-        return win;
+        return isWon;
     }
 }

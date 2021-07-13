@@ -4,21 +4,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Dice {
-   private static List<Die> set;
+   private static List<Die> diceSet;
 
-    public static List<Die> Set(int quantity, int faces) {
-     set = new ArrayList<>();
+    public static List<Die> set(int quantity, int faces) {
+     diceSet = new ArrayList<>();
         for (int idx = 0; idx < quantity; idx++)
-            set.add(new Die(faces));
-      return set;
+            diceSet.add(new Die(faces));
+      return diceSet;
     }
-    public static void Roll(int dieNumber){
-       Die rollDie=set.get(dieNumber);
-       rollDie.Roll();
+    public static void roll(int dieNumber){
+       Die rollDie=diceSet.get(dieNumber);
+       rollDie.roll();
     }
-    public static void RollDice(List<Die> dice){
+    public static void rollDice(List<Die> dice){
         for (int idx=0; idx<dice.size(); idx++){
-           Roll(idx);
+           roll(idx);
         }
 
     }

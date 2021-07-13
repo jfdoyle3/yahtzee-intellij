@@ -15,7 +15,7 @@ public class Die {
         faceUp=1;
     }
 
-    public void Roll(){
+    public void roll(){
        this.faceUp= random.nextInt(faces)+1;
     }
 

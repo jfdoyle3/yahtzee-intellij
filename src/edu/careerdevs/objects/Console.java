@@ -1,6 +1,7 @@
 package edu.careerdevs.objects;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
 
@@ -29,6 +30,11 @@ public class Console {
             System.out.printf("%d ", cube.getFaceUp());
         }
         System.out.println();
+    }
+
+    public static String displayScoreSheet(ScoreSheet scoreSheet) {
+        return "ScoreSheet:\n"
+                + scoreSheet;
     }
 
 }
