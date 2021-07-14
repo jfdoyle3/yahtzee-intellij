@@ -5,9 +5,10 @@ import java.util.List;
 public class Game {
 
     public static void playGame() {
+        Player player=new Player("Jim");
         System.out.println("Playing Game");
 
-        createScoreCard();
+        createScoreCard(player);
 
         List<Die> dice = Dice.set(5, 6);
         int rounds = 3;
@@ -16,17 +17,19 @@ public class Game {
         for (int turn = 0; turn < rounds; turn++) {
             turn(dice);
             Console.DisplayDice(dice);
-            tallyScore(dice);
         }
+        tallyScore(dice);
     }
-
+    // TODO: Fix how to exit turn and tally score
     public static void turn(List<Die> dice) {
         Console.inputDirections(dice);
         List<Integer> userDieChoice = Console.DiceInput(dice.size());
         if(userDieChoice==null)
             System.out.println("null- tally me score up!!");
-        for (int die : userDieChoice) {
-            Dice.roll(die);
+        else {
+            for (int die : userDieChoice) {
+                Dice.roll(die);
+            }
         }
     }
 
@@ -45,8 +48,8 @@ public class Game {
         return isWon;
     }
 
-    public static void createScoreCard(){
-        ScoreSheet scoreSheet=new ScoreSheet();
+    public static void createScoreCard(Player player){
+        ScoreSheet scoreSheet=new ScoreSheet("Yahtzeee",player.getName(),1);
         scoreSheet.addItem("Ones", 0);
         Console.displayScoreSheet(scoreSheet);
     }
