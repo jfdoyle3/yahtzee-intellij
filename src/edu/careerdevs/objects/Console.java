@@ -22,8 +22,7 @@ public class Console {
 
         if (userInput.length() == 1 && userInput.equals("0")) {
             System.out.println("tally score");
-            intList.add(0);
-            return intList;
+            return null;
         } else {
             for (String strNumber : arrayOutput) {
                 int intNumber = Integer.parseInt(strNumber);
@@ -49,6 +48,10 @@ public class Console {
 
     public static void displayScoreSheet(ScoreSheet scoreSheet) {
         System.out.println(scoreSheet.getClass());
+    }
+
+    public static void inputDirections(List<Die> dice){
+        System.out.printf("Enter a die number(s) between 1 - %d.\nex. 134 will roll die 1,3,4\n0 to end turn. : ", (dice.size()) - 1);
     }
 
 }

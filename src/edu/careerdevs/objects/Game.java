@@ -21,8 +21,10 @@ public class Game {
     }
 
     public static void turn(List<Die> dice) {
-        System.out.printf("Enter a number(s) between 1 - %d. ex. 0123  ", (dice.size()) - 1);
+        Console.inputDirections(dice);
         List<Integer> userDieChoice = Console.DiceInput(dice.size());
+        if(userDieChoice==null)
+            System.out.println("null- tally me score up!!");
         for (int die : userDieChoice) {
             Dice.roll(die);
         }
