@@ -10,18 +10,33 @@ public class Console {
     private static final Scanner input = new Scanner(System.in);
 
     public static List<Integer> DiceInput(int amount) {
+
         String userInput = input.nextLine();
+
+        // If the user inputs more than 5 numbers, take the first 5 numbers from string.
+        if (userInput.length() > 5)
+            userInput.substring(0, 5);
+
         String[] arrayOutput = userInput.split("");
         List<Integer> intList = new ArrayList<>();
-        for (String strNumber : arrayOutput) {
-            int intNumber = Integer.parseInt(strNumber);
-            if (intNumber >= amount || intNumber < 0) {
-                System.out.println("Error - keep roll");
-            } else {
-                intList.add(intNumber);
+
+        if (userInput.length() == 1 && userInput.equals("0")) {
+            System.out.println("tally score");
+            intList.add(0);
+            return intList;
+        } else {
+            for (String strNumber : arrayOutput) {
+                int intNumber = Integer.parseInt(strNumber);
+                if (intNumber >= amount + 1 || intNumber < 0) {
+                    System.out.println("Error - keep roll");
+                } else {
+                    intList.add(intNumber - 1);
+
+                }
             }
+            return intList;
         }
-        return intList;
+
     }
 
     public static void DisplayDice(List<Die> dice) {
@@ -32,9 +47,8 @@ public class Console {
         System.out.println();
     }
 
-    public static String displayScoreSheet(ScoreSheet scoreSheet) {
-        return "ScoreSheet:\n"
-                + scoreSheet;
+    public static void displayScoreSheet(ScoreSheet scoreSheet) {
+        System.out.println(scoreSheet.getClass());
     }
 
 }

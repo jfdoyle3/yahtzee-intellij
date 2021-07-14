@@ -8,12 +8,11 @@ public class ScoreSheet {
 
     public ScoreSheet() {
         scoreSheet=new HashMap<>();
-        scoreSheet.put("Ones",0);
-        scoreSheet.put("Twos",0);
-        scoreSheet.put("Threes",0);
-        scoreSheet.put("Fours",0);
-        scoreSheet.put("Fives",0);
-        scoreSheet.put("Sixes",0);
+
+    }
+
+    public void addItem(String item, int score){
+        scoreSheet.put(item,score);
     }
 
     @Override
@@ -22,4 +21,5 @@ public class ScoreSheet {
                 "scoreSheet=" + scoreSheet +
                 '}';
     }
+
 }

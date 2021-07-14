@@ -6,8 +6,9 @@ public class Game {
 
     public static void playGame() {
         System.out.println("Playing Game");
-        ScoreSheet scoreSheet=new ScoreSheet();
-        System.out.println(scoreSheet.toString());
+
+        createScoreCard();
+
         List<Die> dice = Dice.set(5, 6);
         int rounds = 3;
         Dice.rollDice(dice);
@@ -15,11 +16,7 @@ public class Game {
         for (int turn = 0; turn < rounds; turn++) {
             turn(dice);
             Console.DisplayDice(dice);
-            boolean endGame = win(dice);
-            if (endGame) {
-                System.out.println("Yahtzee!!  :)");
-                break;
-            }
+            tallyScore(dice);
         }
     }
 
@@ -44,5 +41,17 @@ public class Game {
             isWon = true;
         }
         return isWon;
+    }
+
+    public static void createScoreCard(){
+        ScoreSheet scoreSheet=new ScoreSheet();
+        scoreSheet.addItem("Ones", 0);
+        Console.displayScoreSheet(scoreSheet);
+    }
+
+    public static void tallyScore(List<Die> Dice){
+
+
+
     }
 }
