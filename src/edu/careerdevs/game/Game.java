@@ -1,4 +1,10 @@
-package edu.careerdevs.objects;
+package edu.careerdevs.game;
+
+import edu.careerdevs.objects.Dice;
+import edu.careerdevs.objects.Die;
+import edu.careerdevs.objects.Player;
+import edu.careerdevs.ui.Console;
+import edu.careerdevs.ui.Input;
 
 import java.util.List;
 
@@ -13,17 +19,17 @@ public class Game {
         List<Die> dice = Dice.set(5, 6);
         int rounds = 3;
         Dice.rollDice(dice);
-        Console.DisplayDice(dice);
+        Console.dicePic(dice);
         for (int turn = 0; turn < rounds; turn++) {
             turn(dice);
-            Console.DisplayDice(dice);
+            Console.altDicePic(dice);
         }
         tallyScore(dice);
     }
     // TODO: Fix how to exit turn and tally score
     public static void turn(List<Die> dice) {
         Console.inputDirections(dice);
-        List<Integer> userDieChoice = Console.DiceInput(dice.size());
+        List<Integer> userDieChoice = Input.DiceInput(dice.size());
         if(userDieChoice==null)
             System.out.println("null- tally me score up!!");
         else {
@@ -49,7 +55,7 @@ public class Game {
     }
 
     public static void createScoreCard(Player player){
-        ScoreSheet scoreSheet=new ScoreSheet("Yahtzeee",player.getName(),1);
+        ScoreSheet scoreSheet=new YathzeeeScoreCard("Yahtzeee",player.getName(),1);
         scoreSheet.addItem("Ones", 0);
         Console.displayScoreSheet(scoreSheet);
     }

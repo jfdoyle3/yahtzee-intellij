@@ -1,8 +1,10 @@
-package edu.careerdevs.objects;
+package edu.careerdevs.game;
+
+import edu.careerdevs.objects.Player;
 
 import java.util.HashMap;
 
-public class ScoreSheet extends Player {
+public abstract class ScoreSheet extends Player {
 
     private String gameName;
     private HashMap<String, Integer> scoreSheet;
@@ -18,6 +20,8 @@ public class ScoreSheet extends Player {
     public void addItem(String item, int score){
         scoreSheet.put(item,score);
     }
+
+
 
 
 

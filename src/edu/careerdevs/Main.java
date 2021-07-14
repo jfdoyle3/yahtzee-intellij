@@ -1,6 +1,6 @@
 package edu.careerdevs;
 
-import edu.careerdevs.objects.Game;
+import edu.careerdevs.game.Game;
 
 public class Main {
 
