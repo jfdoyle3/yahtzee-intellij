@@ -1,4 +1,4 @@
-package edu.careerdevs.game;
+package edu.careerdevs.base_classes;
 
 import edu.careerdevs.objects.Player;
 
@@ -11,18 +11,14 @@ public abstract class ScoreSheet extends Player {
 
     public ScoreSheet(String gameName, String name, int playerNumber) {
         super(name, playerNumber);
-        this.gameName=gameName;
-        scoreSheet=new HashMap<>();
+        this.gameName = gameName;
+        scoreSheet = new HashMap<>();
     }
 
 
-
-    public void addItem(String item, int score){
-        scoreSheet.put(item,score);
+    public void addItem(String item, int score) {
+        scoreSheet.put(item, score);
     }
-
-
-
 
 
     public String toString() {

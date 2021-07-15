@@ -1,5 +1,6 @@
 package edu.careerdevs.game;
 
+import edu.careerdevs.base_classes.ScoreSheet;
 import edu.careerdevs.objects.Dice;
 import edu.careerdevs.objects.Die;
 import edu.careerdevs.objects.Player;
@@ -39,20 +40,7 @@ public class Game {
         }
     }
 
-    public static boolean win(List<Die> dice) {
-        boolean isWon = false;
-        int firstDie = dice.get(0).getFaceUp();
-        int matching = 0;
-        for (int idx = 1; idx < dice.size(); idx++) {
-            if (firstDie == dice.get(idx).getFaceUp()) {
-                matching++;
-            }
-        }
-        if (matching == dice.size() - 1) {
-            isWon = true;
-        }
-        return isWon;
-    }
+
 
     public static void createScoreCard(Player player){
         ScoreSheet scoreSheet=new YathzeeeScoreCard("Yahtzeee",player.getName(),1);
