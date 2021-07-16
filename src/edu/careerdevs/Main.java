@@ -1,6 +1,7 @@
 package edu.careerdevs;
 
 import edu.careerdevs.game.Game;
+import edu.careerdevs.scoresheet.BuildScoreCard;
 import edu.careerdevs.ui.Console;
 
 import java.util.ArrayList;
@@ -13,6 +14,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Game.playGame();
+       // Game.playGame();
+        BuildScoreCard.buildCard();
     }
 }

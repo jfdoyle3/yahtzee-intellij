@@ -8,7 +8,7 @@ import java.util.Map;
 public abstract class ScoreSheet extends Player {
 
     private String gameName;
-    private Map<String, Integer> scoreSheet;
+    private Map<String, Long> scoreSheet;
 
     public ScoreSheet(String gameName, String name, int playerNumber) {
         super(name, playerNumber);
@@ -17,19 +17,19 @@ public abstract class ScoreSheet extends Player {
     }
 
 
-    public void addItem(String item, int score) {
+    public void addItem(String item, long score) {
         scoreSheet.put(item, score);
     }
 
-    public void displayItem(String item){
-        System.out.println(scoreSheet.get(item));
-    }
+  //  public static void displayItem(String item){
+//        System.out.println(scoreSheet.get(item));
+//    }
 
-    public void displayCard(Map<String,Long> scoreCard){
-        for (Map.Entry<String,Long> entry : scoreCard.entrySet())
-            System.out.println("Key = " + entry.getKey() +
-                    ", Value = " + entry.getValue());
-    }
+//    public static void displayCard(ScoreSheet scoreCard.){
+//        for (Map.Entry<String,Long> entry : scoreCard.entrySet())
+//            System.out.println("Key = " + entry.getKey() +
+//                    ", Value = " + entry.getValue());
+//    }
 
     public String toString() {
         return "ScoreSheet{" +

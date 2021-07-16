@@ -22,29 +22,29 @@ public class Game {
         scoreSheet.addItem("Ones", 0);
 
        // System.out.println(scoreSheet);
-        ScoreSheet.displayCard();
-//        List<Die> dice = Dice.set(5, 6);
-//        int rounds = 3;
-//        Dice.rollDice(dice);
-//        Console.dicePic(dice);
-//        for (int turn = 0; turn < rounds; turn++) {
-//            turn(dice);
-//            Console.dicePic(dice);
-//        }
-//        tallyScore(dice);
-//    }
-//    // TODO: Fix how to exit turn and tally score
-//    public static void turn(List<Die> dice) {
-//        Console.inputDirections(dice);
-//        List<Integer> userDieChoice = Input.DiceInput(dice.size());
-//        if(userDieChoice==null) {
-//            System.out.println("null- tally me score up!!");
-//            TallyScore.fullHouse(dice);
-//        }else {
-//            for (int die : userDieChoice) {
-//                Dice.roll(die);
-//            }
-//        }
+ //       ScoreSheet.displayCard();
+        List<Die> dice = Dice.set(5, 6);
+        int rounds = 3;
+        Dice.rollDice(dice);
+        Console.dicePic(dice);
+        for (int turn = 0; turn < rounds; turn++) {
+            turn(dice);
+            Console.dicePic(dice);
+        }
+        tallyScore(dice);
+    }
+    // TODO: Fix how to exit turn and tally score
+    public static void turn(List<Die> dice) {
+        Console.inputDirections(dice);
+        List<Integer> userDieChoice = Input.DiceInput(dice.size());
+        if(userDieChoice==null) {
+            System.out.println("null- tally me score up!!");
+            TallyScore.fullHouse(dice);
+        }else {
+            for (int die : userDieChoice) {
+                Dice.roll(die);
+            }
+        }
     }
 
 
