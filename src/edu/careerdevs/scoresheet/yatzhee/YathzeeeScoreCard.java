@@ -1,6 +1,6 @@
-package edu.careerdevs.game;
+package edu.careerdevs.scoresheet.yatzhee;
 
-import edu.careerdevs.base_classes.ScoreSheet;
+import edu.careerdevs.scoresheet.ScoreSheet;
 
 public class YathzeeeScoreCard extends ScoreSheet {
 

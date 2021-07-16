@@ -12,7 +12,8 @@ public class Player {
     }
 
     public Player(String name){
-        this(name,1);
+        this.name=name;
+        playerNumber=1;
     }
 
     public String getName() {

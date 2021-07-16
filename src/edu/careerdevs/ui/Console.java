@@ -1,7 +1,7 @@
 package edu.careerdevs.ui;
 
 import edu.careerdevs.objects.Die;
-import edu.careerdevs.base_classes.ScoreSheet;
+import edu.careerdevs.scoresheet.ScoreSheet;
 
 import java.util.List;
 
@@ -17,7 +17,7 @@ public class Console {
     }
 
     public static void displayScoreSheet(ScoreSheet scoreSheet) {
-        System.out.println(scoreSheet.getClass().toString());
+        System.out.println(scoreSheet.getPlayerNumber());
     }
 
     public static void inputDirections(List<Die> dice) {
