@@ -18,8 +18,8 @@ public class Game {
         System.out.println("Playing Game");
 
 //        ScoreSheet scoreSheet = createScoreCard(player);
-        ScoreSheet scoreSheet = new YathzeeeScoreCard("Yahtzeee", player.getName(), 1);
-        scoreSheet.addItem("Ones", 0);
+//        ScoreSheet scoreSheet = new YathzeeeScoreCard("Yahtzeee", player.getName(), 1);
+ //       scoreSheet.addItem("Ones", 0);
 
        // System.out.println(scoreSheet);
  //       ScoreSheet.displayCard();
@@ -48,12 +48,12 @@ public class Game {
     }
 
 
-    public static ScoreSheet createScoreCard(Player player) {
-        ScoreSheet scoreSheet = new YathzeeeScoreCard("Yahtzeee", player.getName(), player.getPlayerNumber());
-        scoreSheet.addItem("Ones", 0);
-
-        return scoreSheet;
-    }
+ //   public static ScoreSheet createScoreCard(Player player) {
+//   //     ScoreSheet scoreSheet = new YathzeeeScoreCard("Yahtzeee", player.getName(), player.getPlayerNumber());
+//   //     scoreSheet.addItem("Ones", 0);
+//
+//        return scoreSheet;
+//    }
 
     public static void tallyScore(List<Die> Dice) {
 

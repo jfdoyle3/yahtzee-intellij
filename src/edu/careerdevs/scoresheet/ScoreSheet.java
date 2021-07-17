@@ -27,8 +27,8 @@ public abstract class ScoreSheet extends Player {
 
 //    public static void displayCard(ScoreSheet scoreCard.){
 //        for (Map.Entry<String,Long> entry : scoreCard.entrySet())
-//            System.out.println("Key = " + entry.getKey() +
-//                    ", Value = " + entry.getValue());
+//            System.out.println("|" + entry.getKey() +
+//                    " | " + entry.getValue());
 //    }
 
     public String toString() {
