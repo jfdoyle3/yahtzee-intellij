@@ -6,7 +6,7 @@ import edu.careerdevs.scoresheet.yatzhee.YathzeeeScoreCard;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 
-public class BasicHashCard {
+public class HashCard {
 
     public HashMap<String, Integer> scoreSheet = new HashMap<>();
 
@@ -30,17 +30,17 @@ public class BasicHashCard {
     public static LinkedHashMap <String, Integer> cardBottom() {
         LinkedHashMap<String, Integer> bottomOfCard = new LinkedHashMap<>();
 
-        bottomOfCard.put("3 of a kind", 0);
-        bottomOfCard.put("4 of a kind", 0);
-        bottomOfCard.put("Sm. Straight", 0);
-        bottomOfCard.put("Lg. Straight", 0);
-        bottomOfCard.put("Yahtzee", 0);
-        bottomOfCard.put("Chance", 0);
-        bottomOfCard.put("Yahtzee Bonus", 0);
-        bottomOfCard.put("Yahtzee Bonus2", 0);
-        bottomOfCard.put("Total lower",0);
-        bottomOfCard.put("Total upper",0);
-        bottomOfCard.put("Grand Total",0);
+        bottomOfCard.put("3 of a kind    ", 0);
+        bottomOfCard.put("4 of a kind    ", 0);
+        bottomOfCard.put("Sm. Straight   ", 0);
+        bottomOfCard.put("Lg. Straight   ", 0);
+        bottomOfCard.put("Yahtzee        ", 0);
+        bottomOfCard.put("Chance         ", 0);
+        bottomOfCard.put("Yahtzee Bonus  ", 0);
+        bottomOfCard.put("Yahtzee Bonus2 ", 0);
+        bottomOfCard.put("Total lower    ",0);
+        bottomOfCard.put("Total upper    ",0);
+        bottomOfCard.put("Grand Total    ",0);
 
         System.out.println(bottomOfCard);
 
