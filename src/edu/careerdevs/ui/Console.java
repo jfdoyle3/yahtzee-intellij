@@ -3,7 +3,9 @@ package edu.careerdevs.ui;
 import edu.careerdevs.objects.Die;
 import edu.careerdevs.scoresheet.ScoreSheet;
 
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Console {
 
@@ -41,7 +43,42 @@ public class Console {
         System.out.println("Die:  1      2      3      4      5");
     }
 
+    public static void altDisplayTopCard(LinkedHashMap<String, Integer> topCard) {
+        System.out.println("-----------------------");
+        for (Map.Entry<String, Integer> entry : topCard.entrySet()) {
+            System.out.printf("| %s     | %d |\n", entry.getKey(), entry.getValue());
+            System.out.println("-----------------------");
+        }
+    }
 
+    public static void altDisplayBottomCard(LinkedHashMap<String, Integer> bottomCard) {
+        System.out.println("--------------------");
+        for (Map.Entry<String, Integer> entry : bottomCard.entrySet())
+            System.out.printf("| %s     | %d |\n", entry.getKey(), entry.getValue());
+
+        System.out.println("--------------------");
+    }
+
+    public static void displayBottomCard(LinkedHashMap<String, Integer> bottomCard) {
+        System.out.printf("┌────────────────┬───┐\n");
+        for (Map.Entry<String, Integer> entry : bottomCard.entrySet()) {
+            System.out.printf("│ %s│ %d │\n", entry.getKey(), entry.getValue());
+            System.out.printf("├────────────────┼───┤\n");
+            // bottom of card trying to figure out clean bottom of card.
+            //  System.out.printf("└─────────────┴───┘");
+        }
+    }
+
+
+    public static void displayTopCard(LinkedHashMap<String, Integer> topCard) {
+        System.out.printf("┌─────────────┬───┐\n");
+        for (Map.Entry<String, Integer> entry : topCard.entrySet()) {
+            System.out.printf("│ %s │ %d │\n", entry.getKey(), entry.getValue());
+            System.out.printf("├─────────────┼───┤\n");
+            // bottom of card trying to figure out clean bottom of card.
+            //  System.out.printf("└─────────────┴───┘");
+        }
+    }
 
 
 
