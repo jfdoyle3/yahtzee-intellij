@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Input {
 
     private static final Scanner input = new Scanner(System.in);
-    private static List<Integer> rerollDice = new ArrayList<>();
+    private static final List<Integer> rerollDice = new ArrayList<>();
 
     public static List<Integer> DiceInput(int amount) {
 
@@ -19,15 +19,8 @@ public class Input {
 
         String[] arrayOutput = userInput.split("");
 
-        // TODO: Fix how to exit turn and tally score
-        if (userInput.length() == 1 && userInput.equals("0") || arrayOutput[0].equals("0")) {
-            System.out.println("tally score");
-            return null;
-        } else {
-            reroll(amount, arrayOutput);
-            return rerollDice;
-        }
-
+        reroll(amount, arrayOutput);
+        return rerollDice;
     }
 
     private static void reroll(int amount, String[] arrayOutput) {

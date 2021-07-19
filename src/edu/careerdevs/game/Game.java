@@ -27,25 +27,41 @@ public class Game {
         List<Die> dice = Dice.set(5, 6);
         int rounds = 3;
 
+        // start of turn
+        // roll
         Dice.rollDice(dice);
-        Console.dicePic(dice);
 
-       // do {
-            turn(dice);
-            Console.dicePic(dice);
+        // display dice
+        Console.dicePic(dice);
+        // get input
+        Console.turnDirections(dice);
+
+       List<Integer> userDieChoice = Input.DiceInput(dice.size());
+       for(int choice : userDieChoice)
+           System.out.println(choice);
+//        if (userDieChoice == null) {
+//            System.out.println("null- tally me score up!!");
+//            TallyScore.scoreDice(dice);
+//
+//        } else {
+//            for (int die : userDieChoice)
+//                Dice.roll(die);
+       //}
+       //     Console.dicePic(dice);
         //    rounds++;
 //        }
 //        while (rounds<3);
-        tallyScore(dice);
+ //       tallyScore(dice);
     }
 
-    // TODO: Fix how to exit turn and tally score
+    // TODO: Rewrite turn method - write out long way, then turn back into a method
     public static void turn(List<Die> dice) {
-        Console.inputDirections(dice);
+
+        Console.turnDirections(dice);
         List<Integer> userDieChoice = Input.DiceInput(dice.size());
         if (userDieChoice == null) {
             System.out.println("null- tally me score up!!");
-            MapDice.mapDice(dice);
+            TallyScore.scoreDice(dice);
 
         } else {
             for (int die : userDieChoice) {

@@ -20,7 +20,7 @@ public class TallyScore extends ScoreSheet {
     }
 
 
-    public static void fullHouse(List<Die> dice) {
+    public static void scoreDice(List<Die> dice) {
         // Think maybe have: boolean hasFullHouse
         // Map size must be the size of 2 and have values of 3 & 2
         List<Integer> diceSet = Dice.scoreDice(dice);

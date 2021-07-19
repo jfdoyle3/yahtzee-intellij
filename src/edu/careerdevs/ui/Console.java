@@ -22,7 +22,7 @@ public class Console {
         System.out.println(scoreSheet.getPlayerNumber());
     }
 
-    public static void inputDirections(List<Die> dice) {
+    public static void turnDirections(List<Die> dice) {
         System.out.println("_______________________________________________________________");
         System.out.printf("Enter a die number(s) between 1 - %d no spaces between numbers.\n0 to end turn. : ", (dice.size()));
         // System.out.println("\nex. 134 will roll die 1,3,4");
