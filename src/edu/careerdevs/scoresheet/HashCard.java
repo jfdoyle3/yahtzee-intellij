@@ -13,15 +13,15 @@ public class HashCard {
     public static LinkedHashMap <String, Integer> cardTop() {
         LinkedHashMap<String, Integer> topOfCard = new LinkedHashMap<>();
 
-        topOfCard.put("Ones       ", 0);
-        topOfCard.put("Twos       ", 0);
-        topOfCard.put("Threes     ", 0);
-        topOfCard.put("Fours      ", 0);
-        topOfCard.put("Fives      ", 0);
-        topOfCard.put("Sixes      ", 0);
+        topOfCard.put("Ones", 0);
+        topOfCard.put("Twos", 0);
+        topOfCard.put("Threes", 0);
+        topOfCard.put("Fours", 0);
+        topOfCard.put("Fives", 0);
+        topOfCard.put("Sixes", 0);
         topOfCard.put("Total Score",0);
-        topOfCard.put("Bonus      ",0);
-        topOfCard.put("Total      ",0);
+        topOfCard.put("Bonus",0);
+        topOfCard.put("Total",0);
 
         System.out.println(topOfCard);
         return topOfCard;

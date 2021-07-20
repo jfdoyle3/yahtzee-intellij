@@ -26,11 +26,11 @@ public class Input {
     private static void reroll(int amount, String[] arrayOutput) {
         for (String strNumber : arrayOutput) {
             int intNumber = Integer.parseInt(strNumber);
-            if (intNumber >= amount + 1 || intNumber < 0) {
-                System.out.println("Error - keeping roll");
-            } else {
+//            if (intNumber >= amount + 1 || intNumber < 0) {
+//                System.out.println("Error - keeping roll");
+//            } else {
                 rerollDice.add(intNumber - 1);
-            }
+//            }
         }
     }
 }

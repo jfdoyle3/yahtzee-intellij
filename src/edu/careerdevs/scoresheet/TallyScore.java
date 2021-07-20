@@ -19,6 +19,13 @@ public class TallyScore extends ScoreSheet {
         this.totalScore = totalScore;
     }
 
+    public static void digitsScore(LinkedHashMap<String, Integer> scoreCard, String key, int value, int diceCount){
+        scoreCard.replace(key, scoreCard.get(key), value*diceCount);
+    }
+
+    public static void digitsScore(LinkedHashMap<String, Integer> scoreCard, String key, int diceCountValue){
+        scoreCard.replace(key, scoreCard.get(key), diceCountValue);
+    }
 
     public static void scoreDice(List<Die> dice) {
         // Think maybe have: boolean hasFullHouse

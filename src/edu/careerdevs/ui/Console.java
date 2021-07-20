@@ -80,6 +80,13 @@ public class Console {
         }
     }
 
+    public static void simpleDisplayCard(LinkedHashMap<String, Integer> card) {
+        for (Map.Entry<String, Integer> entry : card.entrySet()) {
+            System.out.printf("%s:\t%d\n", entry.getKey(), entry.getValue());
+        }
+    }
+
+
 
 
 }
