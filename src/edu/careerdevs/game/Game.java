@@ -21,7 +21,7 @@ public class Game {
         // Setup Player and card
         Player player = new Player("Jim");
         System.out.println("Playing Game");
-        LinkedHashMap<String, Integer> card=HashCard.cardTop();
+        LinkedHashMap<String, Integer> card = HashCard.cardTop();
 
         System.out.println("score card:");
         Console.simpleDisplayCard(card);
@@ -43,15 +43,14 @@ public class Game {
         // get input
         Console.turnDirections(dice);
 
-       List<Integer> userDieChoice = Input.DiceInput(dice.size());
-       for(int choice : userDieChoice)
-           System.out.println(choice);
-        if(userDieChoice.get(0)==0){
+        List<Integer> userDieChoice = Input.DiceInput(dice.size());
+        for (int choice : userDieChoice)
+            System.out.println(choice);
+        if (userDieChoice.get(0) == 0)
             System.out.println("Which die to score");
 
 
-        }
-
+    }
 
 
 //        if (userDieChoice == null) {
@@ -61,13 +60,14 @@ public class Game {
 //        } else {
 //            for (int die : userDieChoice)
 //                Dice.roll(die);
-       //}
-       //     Console.dicePic(dice);
-        //    rounds++;
+    //}
+    //     Console.dicePic(dice);
+    //    rounds++;
 //        }
 //        while (rounds<3);
- //       tallyScore(dice);
-    }
+    //       tallyScore(dice);
+
+
 
     // TODO: Rewrite turn method - write out long way, then turn back into a method
     public static void turn(List<Die> dice) {
