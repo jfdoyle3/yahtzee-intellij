@@ -4,6 +4,8 @@ public class Player {
 
     private String name;
     private int playerNumber;
+    // private Cup cup=new Cup();
+    private int score=0;
 
 
     public Player(String name, int playerNumber) {
@@ -15,6 +17,14 @@ public class Player {
         this.name=name;
         playerNumber=1;
     }
+
+//    public int updateScore(){
+//        int roundScore=0;
+//        for(Die die : cup.dice)
+//            score+=die.getFaceUp();
+//        score+=roundScore;
+//        return roundScore;
+//    }
 
     public String getName() {
         return name;

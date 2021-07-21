@@ -25,12 +25,7 @@ public class Game {
 
         System.out.println("score card:");
         Console.simpleDisplayCard(card);
-//        ScoreSheet scoreSheet = createScoreCard(player);
-//        ScoreSheet scoreSheet = new YathzeeeScoreCard("Yahtzeee", player.getName(), 1);
-        //       scoreSheet.addItem("Ones", 0);
 
-        // System.out.println(scoreSheet);
-        //       ScoreSheet.displayCard();
         List<Die> dice = Dice.set(5, 6);
         int rounds = 3;
 
@@ -49,25 +44,8 @@ public class Game {
         if (userDieChoice.get(0) == 0)
             System.out.println("Which die to score");
 
-
+        System.out.println("end of line");
     }
-
-
-//        if (userDieChoice == null) {
-//            System.out.println("null- tally me score up!!");
-//            TallyScore.scoreDice(dice);
-//
-//        } else {
-//            for (int die : userDieChoice)
-//                Dice.roll(die);
-    //}
-    //     Console.dicePic(dice);
-    //    rounds++;
-//        }
-//        while (rounds<3);
-    //       tallyScore(dice);
-
-
 
     // TODO: Rewrite turn method - write out long way, then turn back into a method
     public static void turn(List<Die> dice) {
